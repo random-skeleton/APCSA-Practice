@@ -1,0 +1,29 @@
+import java.util.concurrent.TimeUnit;
+
+public class MyProgram
+{
+    public static void main(String[] args)
+    {
+        System.out.println("            /)");
+        System.out.println(" /\\_/\\      ||");
+        System.out.println("( ._. )____/ |");
+        System.out.println(" |           |");
+        System.out.println("  \\  __  /_  |");
+        int i;
+        for (i=0;i<100;++i) {
+            if (i%2==0){
+                System.out.print("  (_/ (_/  \\_)");
+            } else {
+                System.out.print("   \\_) \\_)(_/ ");
+            }
+            
+            System.out.print("\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b");
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+        Thread.currentThread().interrupt();
+    }
+}
